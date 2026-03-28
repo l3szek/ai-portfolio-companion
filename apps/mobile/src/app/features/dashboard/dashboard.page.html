@@ -94,9 +94,9 @@
               <p class="holding-price">{{ holding.currentPrice | currency }}</p>
             </ion-label>
             <div slot="end" class="holding-gl"
-              [ngClass]="holdingGainLossIsPositive(holding) ? 'positive' : 'negative'">
+              [ngClass]="holding.gainLoss >= 0 ? 'positive' : 'negative'">
               <span class="gl-amount">
-                {{ holdingGainLossIsPositive(holding) ? '+' : '' }}{{ holdingGainLoss(holding) | currency }}
+                {{ holding.gainLoss >= 0 ? '+' : '' }}{{ holding.gainLoss | currency }}
               </span>
               <span class="gl-label">gain / loss</span>
             </div>

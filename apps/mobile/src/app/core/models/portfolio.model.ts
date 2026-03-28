@@ -4,6 +4,8 @@ export interface Holding {
   quantity: number;
   avgCostBasis: number;
   currentPrice: number;
+  marketValue: number;
+  gainLoss: number;
 }
 
 export interface PortfolioSummary {
@@ -12,5 +14,3 @@ export interface PortfolioSummary {
   totalGainLoss: number;
   holdings: Holding[];
 }
-
-export type Insight = string;

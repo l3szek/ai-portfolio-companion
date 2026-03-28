@@ -14,7 +14,7 @@ import {
 } from '@ionic/angular/standalone';
 import { AppHeaderComponent } from '../../shared/components/app-header/app-header.component';
 import { PortfolioService } from '../../core/services/portfolio.service';
-import { PortfolioSummary, Holding } from '../../core/models/portfolio.model';
+import { PortfolioSummary } from '../../core/models/portfolio.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -89,13 +89,5 @@ export class DashboardPage implements OnInit {
 
   get totalGainLossIsPositive(): boolean {
     return (this.portfolio?.totalGainLoss ?? 0) >= 0;
-  }
-
-  holdingGainLoss(holding: Holding): number {
-    return (holding.currentPrice - holding.avgCostBasis) * holding.quantity;
-  }
-
-  holdingGainLossIsPositive(holding: Holding): boolean {
-    return this.holdingGainLoss(holding) >= 0;
   }
 }
