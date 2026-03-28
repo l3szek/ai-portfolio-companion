@@ -90,17 +90,20 @@ export class ChatPage {
         const { done, value } = await reader.read();
         if (done) break;
 
-        if (value.includes('[DONE]')) {
-          const textBeforeDone = value.replace('[DONE]', '').trimEnd();
-          if (textBeforeDone) {
-            this.messages[assistantIndex].text += textBeforeDone;
+        for (const line of value.split('\n')) {
+          if (!line.startsWith('data: ')) continue;
+          const payload = line.slice('data: '.length);
+          if (payload === '[DONE]') {
+            this.streaming = false;
+            break;
           }
-          break;
+          this.messages[assistantIndex].text += payload;
         }
 
-        this.messages[assistantIndex].text += value;
         this.cdr.detectChanges();
         this.content.scrollToBottom(100);
+
+        if (!this.streaming) break;
       }
     } catch {
       this.error = 'Something went wrong. Please try again.';

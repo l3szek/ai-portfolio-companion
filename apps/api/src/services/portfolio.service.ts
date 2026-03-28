@@ -13,7 +13,7 @@ export function getPortfolioSummary(): PortfolioSummary {
 
   const totalValue = holdings.reduce((sum, h) => sum + h.marketValue, 0);
   const totalGainLoss = holdings.reduce((sum, h) => sum + h.gainLoss, 0);
-  const dailyChange = 1.8; // mock daily change percentage
+  const dailyChange = 1.8; // mock daily change amount (USD)
 
   return { totalValue, dailyChange, totalGainLoss, holdings };
 }
