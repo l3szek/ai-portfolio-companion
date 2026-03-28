@@ -25,8 +25,10 @@ The dashboard must:
 ## UI rules
 - mobile-first
 - use Ionic as the primary UI system
+- use a dark theme as the default visual direction
+- create a more polished premium fintech-style dashboard feel
 - improve visual hierarchy, spacing, and typography
-- create a more polished app-like dashboard feel
+- use elevated dark cards and restrained accent colors
 - no charts unless already approved
 - no large additional UI framework unless clearly justified
 - easy to demo and explain

@@ -30,6 +30,8 @@ The chat must:
 - no markdown rendering
 - no attachments
 - no extra chat features
+- use the same dark theme direction as the dashboard
+- keep visual consistency between chat and dashboard
 
 ## Constraints
 - do not add chat history persistence

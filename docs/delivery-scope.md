@@ -43,3 +43,6 @@ The submission uses an explicit multi-agent Claude Code workflow with specialize
 
 ## UI polish note
 The submission may include visual refinement of the dashboard and chat screens, but should avoid broad design-system expansion or unnecessary component-library complexity.
+
+## UI theme direction
+The preferred presentation layer is dark-themed. Dashboard and chat should use a polished dark visual style while staying within the existing product scope and avoiding unnecessary design-system complexity.

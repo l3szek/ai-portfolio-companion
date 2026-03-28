@@ -70,6 +70,7 @@ These exclusions keep the solution tightly aligned with the assessment goal.
 Implementation is orchestrated through a lead Claude Code session with specialized subagents for planning, backend, frontend, review, and documentation. Durable agent configuration is stored in the repository under `.claude/agents/`, and orchestration is guided by a reusable skill under `.claude/skills/`. This keeps the AI-assisted workflow explicit, reviewable, and reproducible.
 
 ## UI approach
-The UI should remain Ionic-first to preserve a mobile-native feel and consistency with the Angular + Ionic + Capacitor stack. 
-Visual polish should come primarily from stronger layout, spacing, typography, theming, and selective use of richer presentational components rather than introducing a large additional UI framework.
+The UI should remain Ionic-first to preserve a mobile-native feel and consistency with the Angular + Ionic + Capacitor stack.
+The preferred visual direction is a dark theme with a premium fintech-style presentation. Visual polish should come primarily from stronger layout, spacing, typography, contrast, and theming rather than introducing a large additional UI framework.
+The interface should feel modern, focused, and app-like on mobile, with dark surfaces, elevated cards, restrained accent colors, and clear information hierarchy.
 Selective use of Angular Material is acceptable for isolated presentational gaps, but Ionic remains the primary UI system.
