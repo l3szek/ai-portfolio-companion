@@ -2,9 +2,6 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { CurrencyPipe, DecimalPipe, NgFor, NgIf, NgClass } from '@angular/common';
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonCard,
   IonList,
@@ -15,6 +12,7 @@ import {
   IonRefresher,
   IonRefresherContent,
 } from '@ionic/angular/standalone';
+import { AppHeaderComponent } from '../../shared/components/app-header/app-header.component';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { PortfolioSummary, Holding } from '../../core/models/portfolio.model';
 
@@ -27,9 +25,7 @@ import { PortfolioSummary, Holding } from '../../core/models/portfolio.model';
     NgClass,
     CurrencyPipe,
     DecimalPipe,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
+    AppHeaderComponent,
     IonContent,
     IonCard,
     IonList,

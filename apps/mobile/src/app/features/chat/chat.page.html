@@ -1,18 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>AI Chat</ion-title>
-    <ion-button
-      *ngIf="messages.length > 0"
-      slot="start"
-      fill="clear"
-      [disabled]="streaming"
-      (click)="resetChat()">
-      <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
-</ion-header>
+<app-header>
+  <ion-button
+    *ngIf="messages.length > 0"
+    slot="start"
+    fill="clear"
+    [disabled]="streaming"
+    (click)="resetChat()">
+    <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+  </ion-button>
+</app-header>
 
 <ion-content>
+  <div class="chat-section-header">
+    <p class="page-section-label">Chat</p>
+  </div>
+
   <!-- Suggested prompts — only shown when no messages exist -->
   <div *ngIf="messages.length === 0" class="prompts-wrap">
     <p class="prompts-label">Try asking</p>

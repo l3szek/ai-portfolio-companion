@@ -6,9 +6,6 @@ import {
 import { FormsModule } from '@angular/forms';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonFooter,
   IonTextarea,
@@ -17,6 +14,7 @@ import {
   IonButton,
   IonIcon,
 } from '@ionic/angular/standalone';
+import { AppHeaderComponent } from '../../shared/components/app-header/app-header.component';
 import { addIcons } from 'ionicons';
 import { chevronBack } from 'ionicons/icons';
 import { ChatService } from '../../core/services/chat.service';
@@ -34,9 +32,7 @@ interface Message {
     NgFor,
     NgClass,
     FormsModule,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
+    AppHeaderComponent,
     IonContent,
     IonFooter,
     IonTextarea,

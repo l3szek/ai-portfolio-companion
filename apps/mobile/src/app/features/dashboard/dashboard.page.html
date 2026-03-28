@@ -1,8 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Portfolio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content>
   <ion-refresher slot="fixed" (ionRefresh)="loadData($event)">
@@ -55,6 +51,7 @@
 
     <!-- Hero -->
     <div class="hero-section">
+      <p class="page-section-label">Portfolio</p>
       <p class="hero-label">Portfolio Value</p>
       <p class="hero-value">{{ portfolio.totalValue | currency }}</p>
       <div class="hero-metrics">

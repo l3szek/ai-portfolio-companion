@@ -54,3 +54,6 @@ The app should use a bottom tab navigation structure appropriate for a mobile-fi
 The primary tabs should be:
 - `/dashboard` for Portfolio
 - `/chat` for Chat
+
+## Top Nav
+ - Make the branded header a reusable standalone Angular component shared across both pages - not duplicated inline in each page template.   
