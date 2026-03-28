@@ -1,6 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>AI Chat</ion-title>
+    <ion-button
+      *ngIf="messages.length > 0"
+      slot="start"
+      fill="clear"
+      [disabled]="streaming"
+      (click)="resetChat()">
+      <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 

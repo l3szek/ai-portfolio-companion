@@ -14,7 +14,11 @@ import {
   IonTextarea,
   IonSpinner,
   IonChip,
+  IonButton,
+  IonIcon,
 } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { chevronBack } from 'ionicons/icons';
 import { ChatService } from '../../core/services/chat.service';
 
 interface Message {
@@ -38,6 +42,8 @@ interface Message {
     IonTextarea,
     IonSpinner,
     IonChip,
+    IonButton,
+    IonIcon,
   ],
   templateUrl: './chat.page.html',
   styleUrls: ['./chat.page.scss'],
@@ -59,7 +65,9 @@ export class ChatPage {
   constructor(
     private chatService: ChatService,
     private cdr: ChangeDetectorRef,
-  ) {}
+  ) {
+    addIcons({ chevronBack });
+  }
 
   selectPrompt(prompt: string): void {
     if (this.streaming) return;
@@ -116,6 +124,14 @@ export class ChatPage {
       this.cdr.detectChanges();
       this.content.scrollToBottom(200);
     }
+  }
+
+  resetChat(): void {
+    if (this.streaming) return;
+    this.messages = [];
+    this.error = null;
+    this.inputText = '';
+    this.cdr.detectChanges();
   }
 
   onKeydown(event: KeyboardEvent): void {
