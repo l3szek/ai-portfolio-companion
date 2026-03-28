@@ -1,23 +1,34 @@
 # Task 06 - Review and Cleanup
 
 ## Goal
-Review the entire repository and simplify anything overengineered or unnecessary.
+Review the repository and simplify anything unnecessary or overengineered without changing visible behavior.
+
+## Inputs
+Read:
+- `CLAUDE.md`
+- `docs/architecture.md`
+- `docs/delivery-scope.md`
+- `docs/implementation-plan.md`
+
+Inspect the whole repository.
 
 ## Required behavior
 - remove dead code
-- remove redundant files
-- simplify naming where useful
+- remove redundant files where appropriate
+- improve naming consistency where useful
 - reduce abstraction if it adds no value
-- preserve visible behavior
+- verify that docs and implementation are still aligned
 
 ## Constraints
-- do not change functionality
 - do not add new features
-- do not perform broad rewrites unless necessary for simplification
-- keep docs accurate
+- do not perform broad rewrites unless needed for simplification
+- preserve visible behavior
+- preserve the documented scope
 
-## Required response after changes
-Return:
-1. simplifications made
-2. files changed
-3. anything that was intentionally left as-is
+## Required output format
+Use these exact sections:
+- Plan
+- Simplifications made
+- Files changed
+- Verification notes
+- Intentionally left as-is

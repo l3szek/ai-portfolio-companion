@@ -1,41 +1,56 @@
 # Task 02 - Backend
 
 ## Goal
-Implement the minimal backend in apps/api.
+Implement the minimal backend for the assessment in `apps/api`.
+
+## Inputs
+Read:
+- `CLAUDE.md`
+- `docs/architecture.md`
+- `docs/delivery-scope.md`
+
+Work only inside:
+- `apps/api`
 
 ## Required behavior
-Create a TypeScript Express backend with:
+Implement a small TypeScript Express backend with:
 - CORS enabled
 - JSON parsing enabled
-- GET /health
-- GET /api/portfolio
-- GET /api/insights
-- POST /api/chat/stream
+- `GET /health`
+- `GET /api/portfolio`
+- `GET /api/insights`
+- `POST /api/chat/stream`
 
-## Data
-Use mock portfolio data stored in the backend.
+## Data requirements
+- use mock portfolio data stored in the backend
+- compute summary metrics on the backend
+- return a portfolio response suitable for the frontend dashboard
+- return a simple insights payload for the dashboard
 
-## Streaming
-The chat endpoint must progressively stream a mock assistant response.
+## Streaming requirements
+- the chat endpoint must progressively stream a mock assistant response
+- the implementation should be simple and demo-friendly
+- do not add a real provider yet
 
-## Structure
-Use:
-- src/routes
-- src/services
-- src/domain
-- src/data
-- src/utils
+## Expected project structure
+Use or create:
+- `src/routes`
+- `src/services`
+- `src/domain`
+- `src/data`
+- `src/utils`
 
 ## Constraints
-- keep code small and readable
-- strict TypeScript
-- do not touch frontend
+- do not modify frontend files
+- do not add authentication
 - do not add a database
-- do not add auth
-- do not add real AI provider integration yet
+- do not add live market integrations
+- keep code small, readable, and well-typed
 
-## Required response after changes
-Return:
-1. files created/changed
-2. how to run backend
-3. how to test each endpoint
+## Required output format
+Use these exact sections:
+- Plan
+- Files changed
+- Run instructions
+- Test instructions
+- Assumptions

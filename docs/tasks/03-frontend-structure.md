@@ -1,29 +1,49 @@
 # Task 03 - Frontend Structure
 
 ## Goal
-Refactor the Angular app into the minimal feature-first structure for this assignment.
+Refactor the Angular app in `apps/mobile` into the minimal feature-first structure required for this assignment.
 
-## Required changes
+## Inputs
+Read:
+- `CLAUDE.md`
+- `docs/architecture.md`
+- `docs/delivery-scope.md`
+
+Work only inside:
+- `apps/mobile`
+
+## Required behavior
+Refactor the app to:
 - keep Angular standalone components
-- create routes for /dashboard and /chat
-- create:
-  - core/config
-  - core/models
-  - core/services
-  - features/dashboard
-  - features/chat
-  - shared/utils
-- remove unnecessary scaffold boilerplate
+- preserve a simple routing setup
+- create routes for `/dashboard` and `/chat`
+- create a minimal feature-first structure
+
+## Required folders
+Create or align to:
+- `core/config`
+- `core/models`
+- `core/services`
+- `features/dashboard`
+- `features/chat`
+- `shared/utils`
+
+## Required cleanup
+- remove unnecessary Angular scaffold boilerplate
 - keep Ionic integration intact
+- keep the app buildable
 
 ## Constraints
-- do not implement full business UI yet
-- do not add extra features
+- do not fully implement dashboard behavior yet
+- do not fully implement chat behavior yet
 - do not touch backend
+- do not add extra screens
 - keep structure easy to explain
 
-## Required response after changes
-Return:
-1. files created/changed
-2. route structure
-3. how to verify the app still builds
+## Required output format
+Use these exact sections:
+- Plan
+- Files changed
+- Route structure
+- Verification steps
+- Assumptions

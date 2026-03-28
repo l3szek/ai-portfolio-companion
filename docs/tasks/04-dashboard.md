@@ -1,34 +1,45 @@
 # Task 04 - Dashboard
 
 ## Goal
-Implement the dashboard page.
+Implement the dashboard page in `apps/mobile`.
+
+## Inputs
+Read:
+- `CLAUDE.md`
+- `docs/architecture.md`
+- `docs/delivery-scope.md`
+
+Assume the backend endpoints already exist.
 
 ## Required behavior
 The dashboard must:
-- fetch data from backend
+- fetch backend data through frontend services
 - display total portfolio value
 - display daily change
 - display total gain/loss
 - display holdings list
 - display AI insights
-- include loading state
-- include error state with retry
+- include a loading state
+- include an error state with retry
 
 ## UI rules
 - mobile-first
 - use Ionic components
 - clean and minimal
 - no charts
-- no extra screens
-- no unnecessary styling complexity
+- no extra sections beyond the documented scope
+- easy to demo and explain
 
 ## Constraints
 - do not add persistence
-- do not add new features outside scope
-- keep the code easy to explain in a Loom video
+- do not add filtering, sorting, or analytics
+- do not introduce state libraries
+- keep the implementation simple and readable
 
-## Required response after changes
-Return:
-1. what the dashboard does
-2. files changed
-3. exact testing steps
+## Required output format
+Use these exact sections:
+- Plan
+- Files changed
+- Behavior summary
+- Test instructions
+- Assumptions
