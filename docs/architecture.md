@@ -68,3 +68,8 @@ These exclusions keep the solution tightly aligned with the assessment goal.
 
 ## AI delivery architecture
 Implementation is orchestrated through a lead Claude Code session with specialized subagents for planning, backend, frontend, review, and documentation. Durable agent configuration is stored in the repository under `.claude/agents/`, and orchestration is guided by a reusable skill under `.claude/skills/`. This keeps the AI-assisted workflow explicit, reviewable, and reproducible.
+
+## UI approach
+The UI should remain Ionic-first to preserve a mobile-native feel and consistency with the Angular + Ionic + Capacitor stack. 
+Visual polish should come primarily from stronger layout, spacing, typography, theming, and selective use of richer presentational components rather than introducing a large additional UI framework.
+Selective use of Angular Material is acceptable for isolated presentational gaps, but Ionic remains the primary UI system.

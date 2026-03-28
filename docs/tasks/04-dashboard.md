@@ -24,11 +24,13 @@ The dashboard must:
 
 ## UI rules
 - mobile-first
-- use Ionic components
-- clean and minimal
-- no charts
-- no extra sections beyond the documented scope
+- use Ionic as the primary UI system
+- improve visual hierarchy, spacing, and typography
+- create a more polished app-like dashboard feel
+- no charts unless already approved
+- no large additional UI framework unless clearly justified
 - easy to demo and explain
+- selective use of Angular Material is acceptable only for isolated presentational gaps
 
 ## Constraints
 - do not add persistence

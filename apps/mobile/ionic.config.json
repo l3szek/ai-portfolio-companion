@@ -1,0 +1,7 @@
+{
+  "name": "Portfolio Companion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

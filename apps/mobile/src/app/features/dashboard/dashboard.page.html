@@ -1,9 +1,126 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Dashboard</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Portfolio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p>Portfolio dashboard coming soon.</p>
+  <ion-refresher slot="fixed" (ionRefresh)="loadData($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Loading skeleton -->
+  <ng-container *ngIf="loading && !error">
+    <div class="hero-skeleton">
+      <ion-skeleton-text animated class="skel-label"></ion-skeleton-text>
+      <ion-skeleton-text animated class="skel-value"></ion-skeleton-text>
+      <div class="skel-chips">
+        <ion-skeleton-text animated class="skel-chip"></ion-skeleton-text>
+        <ion-skeleton-text animated class="skel-chip"></ion-skeleton-text>
+      </div>
+    </div>
+    <div class="section-wrap">
+      <ion-skeleton-text animated class="skel-section-title"></ion-skeleton-text>
+      <ion-card class="holdings-card">
+        <ion-list lines="none">
+          <ion-item *ngFor="let _ of skeletonRows" class="holding-item last">
+            <div class="holding-ticker-block" slot="start">
+              <ion-skeleton-text animated class="skel-ticker"></ion-skeleton-text>
+              <ion-skeleton-text animated class="skel-qty"></ion-skeleton-text>
+            </div>
+            <ion-label class="holding-label">
+              <ion-skeleton-text animated class="skel-name"></ion-skeleton-text>
+              <ion-skeleton-text animated class="skel-price"></ion-skeleton-text>
+            </ion-label>
+            <div slot="end" class="holding-gl-skel">
+              <ion-skeleton-text animated class="skel-gl"></ion-skeleton-text>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </div>
+  </ng-container>
+
+  <!-- Error state -->
+  <div *ngIf="error" class="error-container">
+    <div class="error-icon">⚠</div>
+    <p class="error-message">{{ error }}</p>
+    <ion-button shape="round" fill="outline" color="primary" (click)="loadData()">
+      Try again
+    </ion-button>
+  </div>
+
+  <!-- Data state -->
+  <ng-container *ngIf="!loading && !error && portfolio">
+
+    <!-- Hero -->
+    <div class="hero-section">
+      <p class="hero-label">Portfolio Value</p>
+      <p class="hero-value">{{ portfolio.totalValue | currency }}</p>
+      <div class="hero-metrics">
+        <div class="hero-metric">
+          <span class="metric-chip"
+            [ngClass]="dailyChangeIsPositive ? 'chip-positive' : 'chip-negative'">
+            {{ dailyChangeIsPositive ? '▲' : '▼' }}&nbsp;{{ portfolio.dailyChange | currency }}
+            ({{ dailyChangePercent | number:'1.2-2' }}%)
+          </span>
+          <span class="metric-caption">Today</span>
+        </div>
+        <div class="hero-metric">
+          <span class="metric-chip"
+            [ngClass]="totalGainLossIsPositive ? 'chip-positive' : 'chip-negative'">
+            {{ totalGainLossIsPositive ? '+' : '' }}{{ portfolio.totalGainLoss | currency }}
+          </span>
+          <span class="metric-caption">Total Gain / Loss</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Holdings -->
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-title">Holdings</span>
+        <span class="section-count">{{ portfolio.holdings.length }}</span>
+      </div>
+      <ion-card class="holdings-card">
+        <ion-list lines="none">
+          <ion-item
+            *ngFor="let holding of portfolio.holdings; let last = last"
+            class="holding-item"
+            [class.last]="last">
+            <div class="holding-ticker-block" slot="start">
+              <span class="holding-ticker">{{ holding.symbol }}</span>
+              <span class="holding-qty">{{ holding.quantity }} sh</span>
+            </div>
+            <ion-label class="holding-label">
+              <p class="holding-name">{{ holding.name }}</p>
+              <p class="holding-price">{{ holding.currentPrice | currency }}</p>
+            </ion-label>
+            <div slot="end" class="holding-gl"
+              [ngClass]="holdingGainLossIsPositive(holding) ? 'positive' : 'negative'">
+              <span class="gl-amount">
+                {{ holdingGainLossIsPositive(holding) ? '+' : '' }}{{ holdingGainLoss(holding) | currency }}
+              </span>
+              <span class="gl-label">gain / loss</span>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </div>
+
+    <!-- AI Insights -->
+    <div class="section-wrap insights-section">
+      <div class="section-header">
+        <span class="section-title">AI Insights</span>
+      </div>
+      <div class="insight-list">
+        <div *ngFor="let insight of insights" class="insight-item">
+          <span class="insight-dot"></span>
+          <p class="insight-text">{{ insight }}</p>
+        </div>
+        <p *ngIf="insights.length === 0" class="no-insights">No insights available.</p>
+      </div>
+    </div>
+
+  </ng-container>
 </ion-content>

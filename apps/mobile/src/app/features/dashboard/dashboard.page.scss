@@ -1,0 +1,324 @@
+// ── Hero ──────────────────────────────────────────────────────────────────────
+
+.hero-section {
+  background: linear-gradient(160deg, #003db5 0%, #0054e9 55%, #1a6eff 100%);
+  padding: 28px 24px 32px;
+  color: #fff;
+}
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin: 0 0 8px;
+}
+
+.hero-value {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metric-chip {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 20px;
+  white-space: nowrap;
+
+  &.chip-positive {
+    background: rgba(45, 213, 91, 0.2);
+    color: #76ffaa;
+  }
+
+  &.chip-negative {
+    background: rgba(255, 80, 80, 0.2);
+    color: #ffb3b3;
+  }
+}
+
+.metric-caption {
+  font-size: 10px;
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+  padding-left: 3px;
+}
+
+// ── Sections ──────────────────────────────────────────────────────────────────
+
+.section-wrap {
+  padding: 20px 16px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ion-color-medium);
+}
+
+.section-count {
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--ion-color-light);
+  color: var(--ion-color-medium);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+// ── Holdings card ─────────────────────────────────────────────────────────────
+
+.holdings-card {
+  margin: 0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+
+  ion-list {
+    padding: 0;
+  }
+}
+
+.holding-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 0;
+  --min-height: 66px;
+  border-bottom: 1px solid var(--ion-color-light);
+
+  &.last {
+    border-bottom: none;
+  }
+}
+
+.holding-ticker-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 50px;
+  margin-right: 12px;
+}
+
+.holding-ticker {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ion-color-dark);
+  letter-spacing: 0.02em;
+}
+
+.holding-qty {
+  font-size: 11px;
+  color: var(--ion-color-medium);
+  margin-top: 3px;
+}
+
+.holding-label {
+  p {
+    margin: 0;
+  }
+}
+
+.holding-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ion-color-dark);
+}
+
+.holding-price {
+  font-size: 12px;
+  color: var(--ion-color-medium);
+  margin-top: 3px !important;
+}
+
+.holding-gl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  min-width: 82px;
+}
+
+.gl-amount {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.gl-label {
+  font-size: 10px;
+  color: var(--ion-color-medium);
+  letter-spacing: 0.04em;
+}
+
+.holding-gl.positive .gl-amount { color: var(--ion-color-success); }
+.holding-gl.negative .gl-amount { color: var(--ion-color-danger); }
+
+// ── AI Insights ───────────────────────────────────────────────────────────────
+
+.insights-section {
+  padding-bottom: 36px;
+}
+
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--ion-color-light);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--ion-color-primary);
+}
+
+.insight-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ion-color-primary);
+  margin-top: 7px;
+}
+
+.insight-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ion-color-dark);
+  margin: 0;
+}
+
+.no-insights {
+  color: var(--ion-color-medium);
+  font-size: 14px;
+}
+
+// ── Loading skeleton ──────────────────────────────────────────────────────────
+
+.hero-skeleton {
+  background: var(--ion-color-light);
+  padding: 28px 24px 32px;
+}
+
+.skel-label {
+  width: 90px;
+  height: 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.skel-value {
+  width: 190px;
+  height: 36px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.skel-chips {
+  display: flex;
+  gap: 10px;
+}
+
+.skel-chip {
+  width: 130px;
+  height: 26px;
+  border-radius: 20px;
+}
+
+.skel-section-title {
+  width: 70px;
+  height: 11px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.skel-ticker {
+  width: 44px;
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.skel-qty {
+  width: 30px;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.skel-name {
+  width: 120px;
+  height: 13px;
+  border-radius: 4px;
+  margin-bottom: 5px !important;
+}
+
+.skel-price {
+  width: 80px;
+  height: 11px;
+  border-radius: 4px;
+}
+
+.holding-gl-skel {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  min-width: 82px;
+}
+
+.skel-gl {
+  width: 72px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+// ── Error state ───────────────────────────────────────────────────────────────
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 24px;
+  gap: 12px;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 40px;
+  opacity: 0.45;
+}
+
+.error-message {
+  color: var(--ion-color-medium);
+  font-size: 15px;
+  max-width: 260px;
+  line-height: 1.55;
+  margin: 0;
+}

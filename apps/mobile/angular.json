@@ -24,6 +24,7 @@
             "outputPath": "www",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "polyfills": ["zone.js"],
             "assets": [
               {
                 "glob": "**/*",
@@ -60,6 +61,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "host": "localhost",
+            "port": 8100
+          },
           "configurations": {
             "production": {
               "buildTarget": "mobile:build:production"

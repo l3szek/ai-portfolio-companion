@@ -40,3 +40,6 @@ The scope is intentionally narrow in order to highlight:
 
 ## Delivery workflow note
 The submission uses an explicit multi-agent Claude Code workflow with specialized subagents and a reusable orchestration skill stored in the repository.
+
+## UI polish note
+The submission may include visual refinement of the dashboard and chat screens, but should avoid broad design-system expansion or unnecessary component-library complexity.
