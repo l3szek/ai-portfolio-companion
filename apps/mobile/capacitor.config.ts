@@ -1,9 +1,9 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'com.example.portfoliocompanion',
-  appName: 'Portfolio Companion',
-  webDir: 'www/browser',
+	appId: "com.example.aiportfoliocompanion",
+	appName: "AI Portfolio Companion",
+	webDir: "www/browser",
 };
 
 export default config;
