@@ -3,3 +3,78 @@
 @import '@ionic/angular/css/normalize.css';
 @import '@ionic/angular/css/structure.css';
 @import '@ionic/angular/css/typography.css';
+
+/* ── Dark theme tokens ───────────────────────────────────────────────────── */
+
+:root {
+  /* Backgrounds — layered elevation model */
+  --ion-background-color: #0f1117;
+  --ion-background-color-rgb: 15, 17, 23;
+
+  /* Primary text — light on dark */
+  --ion-text-color: #e2e4ef;
+  --ion-text-color-rgb: 226, 228, 239;
+
+  /* Card / item surfaces */
+  --ion-card-background: #1a1d27;
+  --ion-item-background: #1a1d27;
+
+  /* Light — most elevated surface (badges, insight bg) */
+  --ion-color-light: #252836;
+  --ion-color-light-rgb: 37, 40, 54;
+  --ion-color-light-contrast: #e2e4ef;
+  --ion-color-light-contrast-rgb: 226, 228, 239;
+  --ion-color-light-shade: #1e2130;
+  --ion-color-light-tint: #2d3142;
+
+  /* Medium — muted labels and captions */
+  --ion-color-medium: #6b6f85;
+  --ion-color-medium-rgb: 107, 111, 133;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #5e6277;
+  --ion-color-medium-tint: #7a7e96;
+
+  /* Dark — primary text (remapped to light for dark mode) */
+  --ion-color-dark: #e2e4ef;
+  --ion-color-dark-rgb: 226, 228, 239;
+  --ion-color-dark-contrast: #0f1117;
+  --ion-color-dark-contrast-rgb: 15, 17, 23;
+  --ion-color-dark-shade: #c7c9d9;
+  --ion-color-dark-tint: #e5e7f1;
+
+  /* Primary accent — brightened for dark surfaces */
+  --ion-color-primary: #4d9fff;
+  --ion-color-primary-rgb: 77, 159, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #4490e8;
+  --ion-color-primary-tint: #5fa9ff;
+
+  /* Success / Danger — iOS dark system colors */
+  --ion-color-success: #30d158;
+  --ion-color-success-rgb: 48, 209, 88;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+
+  --ion-color-danger: #ff453a;
+  --ion-color-danger-rgb: 255, 69, 58;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+
+  /* Toolbar */
+  --ion-toolbar-background: #0f1117;
+  --ion-toolbar-color: #e2e4ef;
+  --ion-toolbar-border-color: rgba(255, 255, 255, 0.06);
+
+  /* Subtle dividers */
+  --ion-border-color: rgba(255, 255, 255, 0.07);
+
+  /* Tab bar */
+  --ion-tab-bar-background: #0f1117;
+  --ion-tab-bar-border-color: rgba(255, 255, 255, 0.06);
+}
+
+body {
+  background: #0f1117;
+}
