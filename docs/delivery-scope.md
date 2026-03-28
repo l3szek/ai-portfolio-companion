@@ -51,3 +51,6 @@ The preferred presentation layer is dark-themed. Dashboard and chat should use a
 The mobile app should use a bottom tab navigation pattern for the two primary sections:
 - Portfolio
 - Chat
+
+## Chat UX scope
+The Chat section should include a recoverable entry state with suggested prompts and a conversation state. Users should be able to return to the prompt selection view from within the Chat tab.

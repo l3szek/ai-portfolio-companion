@@ -32,6 +32,8 @@ The chat must:
 - no extra chat features
 - use the same dark theme direction as the dashboard
 - keep visual consistency between chat and dashboard
+- the user must be able to restart or exit the current conversation flow from within the Chat tab
+- keep the transition between prompt selection and conversation clear and simple
 
 ## Constraints
 - do not add chat history persistence
@@ -49,3 +51,11 @@ Use these exact sections:
 
 ## Navigation context
 The chat page should work as one of the two main destinations in the bottom tab navigation and should remain visually consistent with the portfolio/dashboard screen.
+
+## Additional chat UX requirement
+The chat must support:
+- a start state with suggested prompts
+- an active conversation state
+- a way to return from the conversation state back to the start state without leaving the Chat tab
+
+This return action should be simple, visible, and mobile-friendly.

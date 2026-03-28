@@ -83,3 +83,10 @@ The primary tabs should be:
 - Chat
 
 This keeps navigation simple, app-like, and easy to use on mobile devices.
+
+## Chat interaction model
+The Chat tab should support two internal UI states:
+- a prompt selection / start screen
+- an active conversation screen
+
+Users must be able to return from the conversation screen to the prompt selection state without leaving the Chat tab. This keeps the chat flow mobile-friendly and easy to restart during a demo.
