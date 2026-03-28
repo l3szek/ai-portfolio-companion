@@ -90,3 +90,12 @@ The Chat tab should support two internal UI states:
 - an active conversation screen
 
 Users must be able to return from the conversation screen to the prompt selection state without leaving the Chat tab. This keeps the chat flow mobile-friendly and easy to restart during a demo.
+
+## Header branding
+The application should include a consistent branded header across primary screens.
+
+The header should prominently display:
+- the app name: `AI Portfolio Companion`
+- a simple logo or visual mark
+
+Each screen should also show the current section name, such as `Portfolio` or `Chat`, as a secondary label or subtitle. The section label does not need to be part of the top navigation bar itself, but it should remain clearly visible near the top of the screen.

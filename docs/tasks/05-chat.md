@@ -35,6 +35,8 @@ The chat must:
 - the user must be able to restart or exit the current conversation flow from within the Chat tab
 - keep the transition between prompt selection and conversation clear and simple
 - when user is in the chat, there should be a visual indicator to go back to the previuous state with chat listing - that should be a button with the 'chevron back' icon on the top nav bar
+- include the shared app branding near the top using the product name `AI Portfolio Companion`
+- include the current section label `Chat` as a secondary heading or subtitle near the top
 
 ## Constraints
 - do not add chat history persistence

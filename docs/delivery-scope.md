@@ -54,3 +54,6 @@ The mobile app should use a bottom tab navigation pattern for the two primary se
 
 ## Chat UX scope
 The Chat section should include a recoverable entry state with suggested prompts and a conversation state. Users should be able to return to the prompt selection view from within the Chat tab.
+
+## Branding scope
+The app should include a lightweight branded header using the product name `AI Portfolio Companion` and a simple logo/mark. Each primary screen should also show the current section name near the top.

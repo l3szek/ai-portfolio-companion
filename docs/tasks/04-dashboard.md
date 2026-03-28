@@ -33,6 +33,8 @@ The dashboard must:
 - no large additional UI framework unless clearly justified
 - easy to demo and explain
 - selective use of Angular Material is acceptable only for isolated presentational gaps
+- include the shared app branding near the top using the product name `AI Portfolio Companion`
+- include the current section label `Portfolio` as a secondary heading or subtitle near the top
 
 ## Constraints
 - do not add persistence
