@@ -11,13 +11,13 @@ Build a small but complete AI-native portfolio companion that demonstrates:
 ## High-level architecture
 
 ### Frontend
-- Angular
-- Ionic UI components
-- Capacitor for mobile runtime and simulator support
+- Angular 21
+- Ionic 8 UI components
+- Capacitor 8 for mobile runtime and simulator support
 
 ### Backend
-- Node.js
-- Express
+- Node.js 20+
+- Express 5
 - TypeScript
 
 ### Data strategy
@@ -32,6 +32,7 @@ Build a small but complete AI-native portfolio companion that demonstrates:
 - render chat UI
 - manage loading and error states
 - progressively display streaming assistant output
+- shared `AppHeaderComponent` provides consistent branding across screens
 
 ## Backend responsibilities
 - provide portfolio endpoint
