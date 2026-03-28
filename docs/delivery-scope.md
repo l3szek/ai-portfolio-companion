@@ -46,3 +46,8 @@ The submission may include visual refinement of the dashboard and chat screens, 
 
 ## UI theme direction
 The preferred presentation layer is dark-themed. Dashboard and chat should use a polished dark visual style while staying within the existing product scope and avoiding unnecessary design-system complexity.
+
+## Navigation scope
+The mobile app should use a bottom tab navigation pattern for the two primary sections:
+- Portfolio
+- Chat

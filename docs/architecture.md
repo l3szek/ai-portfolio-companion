@@ -74,3 +74,12 @@ The UI should remain Ionic-first to preserve a mobile-native feel and consistenc
 The preferred visual direction is a dark theme with a premium fintech-style presentation. Visual polish should come primarily from stronger layout, spacing, typography, contrast, and theming rather than introducing a large additional UI framework.
 The interface should feel modern, focused, and app-like on mobile, with dark surfaces, elevated cards, restrained accent colors, and clear information hierarchy.
 Selective use of Angular Material is acceptable for isolated presentational gaps, but Ionic remains the primary UI system.
+
+## Navigation approach
+Because the application is mobile-first and currently centered around two primary destinations, the preferred navigation model is a bottom tab bar.
+
+The primary tabs should be:
+- Portfolio
+- Chat
+
+This keeps navigation simple, app-like, and easy to use on mobile devices.

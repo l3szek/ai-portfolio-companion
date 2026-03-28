@@ -47,3 +47,10 @@ Use these exact sections:
 - Route structure
 - Verification steps
 - Assumptions
+
+## Navigation requirement
+The app should use a bottom tab navigation structure appropriate for a mobile-first Ionic application.
+
+The primary tabs should be:
+- `/dashboard` for Portfolio
+- `/chat` for Chat

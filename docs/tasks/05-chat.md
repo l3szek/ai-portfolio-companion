@@ -46,3 +46,6 @@ Use these exact sections:
 - Streaming flow summary
 - Test instructions
 - Assumptions
+
+## Navigation context
+The chat page should work as one of the two main destinations in the bottom tab navigation and should remain visually consistent with the portfolio/dashboard screen.
