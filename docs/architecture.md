@@ -100,3 +100,6 @@ The header should prominently display:
 - a simple logo or visual mark
 
 Each screen should also show the current section name, such as `Portfolio` or `Chat`, as a secondary label or subtitle. The section label does not need to be part of the top navigation bar itself, but it should remain clearly visible near the top of the screen.
+
+## Brand asset consistency
+The simple logo/brand mark used in the app header should also be reused as the favicon so the application has consistent branding across the UI shell and browser tab.

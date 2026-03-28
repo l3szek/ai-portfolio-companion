@@ -19,6 +19,7 @@ Inspect the implemented codebase before editing docs.
 - ensure the workflow description matches the actual multi-agent setup
 - refine demo/Loom notes if needed
 - keep documentation concise and concrete
+- ensure branding assets are used consistently, including reuse of the header logo as the favicon when feasible
 
 ## Constraints
 - do not invent features not present in code

@@ -57,3 +57,6 @@ The Chat section should include a recoverable entry state with suggested prompts
 
 ## Branding scope
 The app should include a lightweight branded header using the product name `AI Portfolio Companion` and a simple logo/mark. Each primary screen should also show the current section name near the top.
+
+## Brand consistency
+The favicon should reuse the same simple logo/mark used in the branded app header.
