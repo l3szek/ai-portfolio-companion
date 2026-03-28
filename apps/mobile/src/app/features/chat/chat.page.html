@@ -5,5 +5,60 @@
 </ion-header>
 
 <ion-content>
-  <p>AI chat coming soon.</p>
+  <!-- Suggested prompts — only shown when no messages exist -->
+  <div *ngIf="messages.length === 0" class="prompts-wrap">
+    <p class="prompts-label">Try asking</p>
+    <div class="prompts-list">
+      <ion-chip
+        *ngFor="let prompt of suggestedPrompts"
+        class="prompt-chip"
+        [disabled]="streaming"
+        (click)="selectPrompt(prompt)">
+        {{ prompt }}
+      </ion-chip>
+    </div>
+  </div>
+
+  <!-- Message list -->
+  <div class="messages-wrap" *ngIf="messages.length > 0">
+    <div
+      *ngFor="let msg of messages"
+      class="message-row"
+      [ngClass]="msg.role">
+      <div class="bubble" [ngClass]="msg.role">
+        <span *ngIf="msg.role === 'assistant' && msg.text === '' && streaming" class="typing-indicator">
+          <span></span><span></span><span></span>
+        </span>
+        <span *ngIf="!(msg.role === 'assistant' && msg.text === '' && streaming)">{{ msg.text }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error state -->
+  <div *ngIf="error" class="error-banner">
+    <span class="error-icon">&#9888;</span>
+    <span class="error-text">{{ error }}</span>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <div class="input-row">
+    <ion-textarea
+      class="message-input"
+      [(ngModel)]="inputText"
+      placeholder="Ask about your portfolio..."
+      [rows]="1"
+      [autoGrow]="true"
+      [maxlength]="1000"
+      [disabled]="streaming"
+      (keydown)="onKeydown($event)">
+    </ion-textarea>
+    <button
+      class="send-btn"
+      [disabled]="streaming || !inputText.trim()"
+      (click)="sendMessage()">
+      <ion-spinner *ngIf="streaming" name="dots" class="send-spinner"></ion-spinner>
+      <span *ngIf="!streaming">&#10148;</span>
+    </button>
+  </div>
+</ion-footer>

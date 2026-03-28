@@ -1,0 +1,198 @@
+// ── Suggested prompts ─────────────────────────────────────────────────────────
+
+.prompts-wrap {
+  padding: 32px 20px 16px;
+}
+
+.prompts-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ion-color-medium);
+  margin: 0 0 14px;
+}
+
+.prompts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prompt-chip {
+  --background: var(--ion-color-light);
+  --color: var(--ion-color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  height: auto;
+  white-space: normal;
+  text-align: left;
+  cursor: pointer;
+  justify-content: flex-start;
+
+  &:active {
+    opacity: 0.75;
+  }
+
+  &[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+// ── Message list ──────────────────────────────────────────────────────────────
+
+.messages-wrap {
+  padding: 16px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-row {
+  display: flex;
+
+  &.user {
+    justify-content: flex-end;
+  }
+
+  &.assistant {
+    justify-content: flex-start;
+  }
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 11px 15px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-word;
+
+  &.user {
+    background: var(--ion-color-primary);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+  }
+
+  &.assistant {
+    background: var(--ion-color-light);
+    color: var(--ion-color-dark);
+    border-bottom-left-radius: 4px;
+  }
+}
+
+// ── Typing indicator ──────────────────────────────────────────────────────────
+
+.typing-indicator {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 2px 0;
+
+  span {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ion-color-medium);
+    animation: typing-bounce 1.1s infinite ease-in-out;
+
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(2) { animation-delay: 0.18s; }
+    &:nth-child(3) { animation-delay: 0.36s; }
+  }
+}
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+
+// ── Error banner ──────────────────────────────────────────────────────────────
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 16px;
+  padding: 12px 16px;
+  background: rgba(255, 69, 58, 0.1);
+  border: 1px solid rgba(255, 69, 58, 0.25);
+  border-radius: 12px;
+}
+
+.error-icon {
+  font-size: 16px;
+  color: var(--ion-color-danger);
+  flex-shrink: 0;
+}
+
+.error-text {
+  font-size: 14px;
+  color: var(--ion-color-danger);
+  line-height: 1.45;
+}
+
+// ── Input row (footer) ────────────────────────────────────────────────────────
+
+ion-footer {
+  background: var(--ion-toolbar-background);
+  border-top: 1px solid var(--ion-toolbar-border-color);
+}
+
+.input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 10px 12px 12px;
+}
+
+.message-input {
+  flex: 1;
+  --background: var(--ion-color-light);
+  --color: var(--ion-color-dark);
+  --placeholder-color: var(--ion-color-medium);
+  --border-radius: 20px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  font-size: 15px;
+  min-height: 42px;
+  max-height: 120px;
+}
+
+.send-btn {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--ion-color-primary);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.8;
+  }
+}
+
+.send-spinner {
+  --color: #ffffff;
+  width: 20px;
+  height: 20px;
+}
