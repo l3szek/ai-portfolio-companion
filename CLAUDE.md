@@ -1,24 +1,25 @@
-# AI Portfolio Companion - Global Agent Instructions
+# AI Portfolio Companion - Lead Agent Instructions
 
-You are assisting with a take-home assessment project for a Principal Engineer role.
+You are the lead agent for a multi-agent take-home assessment workflow.
 
-## Product goal
-Build a minimal but polished AI-native portfolio companion that demonstrates:
+## Objective
+Deliver a minimal but polished AI-native portfolio companion that demonstrates:
 - Angular + Ionic + Capacitor frontend
 - Node + Express TypeScript backend
 - portfolio dashboard
 - AI chat with streaming
-- strong documentation
-- intentional AI-assisted delivery workflow
+- clear documentation
+- disciplined multi-agent AI-assisted delivery
 
 ## Delivery philosophy
-This project must favor:
+Prioritize:
 1. clarity over complexity
 2. completeness over breadth
 3. reviewability over cleverness
 4. minimal scope over feature expansion
 
-## In scope
+## Product scope
+In scope:
 - dashboard page
 - portfolio summary metrics
 - holdings list
@@ -30,76 +31,61 @@ This project must favor:
 - iOS simulator support
 - architecture and workflow documentation
 
-## Out of scope
+Out of scope:
 - authentication
 - database
 - user accounts
 - brokerage integrations
-- real market feeds
+- live market feeds
 - advanced charting
 - analytics
-- push notifications
+- notifications
 - E2E tests
-- production hardening
-- deployment pipeline
+- production deployment pipeline
 
-## Architectural rules
+## Multi-agent policy
+You are the orchestrator, not the sole implementer.
+
+Delegate work to specialized subagents whenever appropriate:
+- architect: repository assessment, implementation planning, scope control
+- backend: API, domain types, mock data, metrics, streaming endpoint
+- frontend: Angular structure, dashboard, chat UI, API integration
+- reviewer: simplification, dead code removal, naming cleanup, consistency checks
+- docs-demo: README, docs alignment, Loom/demo polish
+
+Use subagents for focused work so the project shows explicit multi-agent orchestration.
+
+## Delegation rules
+- Start by assessing the repository and deciding execution order
+- Delegate backend and frontend implementation to specialized subagents
+- Delegate cleanup to reviewer
+- Delegate final documentation alignment to docs-demo
+- Keep each delegated task narrow and bounded
+- Do not expand scope
+- Do not refactor unrelated code
+
+## Architecture rules
 - Use Angular standalone components
-- Use feature-first folder structure in the frontend
+- Use feature-first structure in frontend
 - Keep API access in services
 - Keep business logic out of templates
 - Keep AI integration strictly on the backend
 - Use strict TypeScript
 - Prefer simple readable code
 - Avoid unnecessary abstractions
-- Avoid scope creep
 
-## Frontend expectations
-Expected folders:
-- core/config
-- core/models
-- core/services
-- features/dashboard
-- features/chat
-- shared/utils
+## Output rules
+Before editing, state the plan briefly.
+After each major step:
+- summarize files changed
+- explain how to test
+- identify risks or assumptions
 
-Frontend must:
-- be mobile-first
-- use Ionic components
-- include loading and error states
-- remain easy to explain in a Loom video
-
-## Backend expectations
-Expected folders:
-- src/routes
-- src/services
-- src/domain
-- src/data
-- src/utils
-
-Backend must:
-- expose /health
-- expose /api/portfolio
-- expose /api/insights
-- expose /api/chat/stream
-- use mock data first
-- support progressive streamed responses
-
-## Working rules
-- Read the task file before making changes
-- Work only on the requested task
-- Do not refactor unrelated code
-- Do not add bonus features
-- Before editing, briefly explain the plan
-- After editing, summarize created/changed files
-- State how the result should be tested
-- Keep docs aligned with implementation
-
-## Quality bar
-Before finalizing any change, verify:
+## Final quality checks
+Before considering work complete:
 - Is this required by the assignment?
-- Is it simple enough to explain in under 2 minutes?
+- Is it simple enough to explain quickly?
 - Is it mobile-first?
 - Are secrets kept off the client?
 - Is this the smallest complete solution?
-- Is documentation still correct?
+- Do docs match implementation?

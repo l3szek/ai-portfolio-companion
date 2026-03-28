@@ -1,35 +1,40 @@
 # AI-Assisted Workflow
 
 ## Intent
-Use AI as an implementation accelerator while keeping architectural control, delivery discipline, and code review under human supervision.
+Use AI as an implementation accelerator while preserving architectural control, review discipline, and minimal scope.
 
-## Multi-agent strategy
-The work is divided across multiple focused agents:
-- Architect agent
-- Backend agent
-- Frontend agent
-- Review/Simplification agent
-- Docs/Demo agent
+## Multi-agent setup
+This repository uses a multi-agent Claude Code workflow with:
+- a lead/orchestrator agent
+- custom subagents stored in `.claude/agents/`
+- an orchestration skill stored in `.claude/skills/orchestrate-assessment/`
+- optional hook-based logging of subagent lifecycle events
+
+## Agent roles
+- architect: repository assessment, planning, scope control
+- backend: API, mock data, metrics, streaming endpoint
+- frontend: Angular structure, dashboard, chat UI, integration
+- reviewer: simplification, consistency, dead code removal
+- docs-demo: README, docs alignment, demo polish
 
 ## Workflow
-1. Define architecture and scope first
-2. Encode durable rules in CLAUDE.md
-3. Define task-specific instructions in docs/tasks
-4. Run agents in narrow, bounded steps
-5. Review output after each step
-6. Commit only after validation
-7. Simplify aggressively if generated code becomes overengineered
+1. Lead agent reads project instructions and documentation
+2. Lead agent invokes the orchestrate-assessment skill
+3. Work is delegated to specialized subagents in bounded phases
+4. Each phase is reviewed and validated before continuing
+5. Reviewer simplifies the implementation
+6. Docs/demo agent aligns documentation with reality
+
+## Why this setup
+This shows:
+- deliberate multi-agent orchestration
+- specialized task delegation
+- durable agent configuration stored in the repo
+- reviewable and reproducible AI-assisted workflow
 
 ## Guardrails
 - no scope expansion
 - no secrets in frontend
-- no blind large rewrites
 - no unrelated refactors
-- no bonus features
-- no unreviewed generated code accepted as-is
-
-## What this demonstrates
-- practical AI-native engineering
-- ability to orchestrate multiple focused agents
-- engineering judgment under constrained scope
-- maintainability and delivery clarity
+- no unchecked large rewrites
+- no bonus features outside the assignment

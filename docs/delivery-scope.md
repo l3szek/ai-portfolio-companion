@@ -37,3 +37,6 @@ The scope is intentionally narrow in order to highlight:
 - maintainable code structure
 - practical AI-native engineering workflow
 - clear trade-off decisions
+
+## Delivery workflow note
+The submission uses an explicit multi-agent Claude Code workflow with specialized subagents and a reusable orchestration skill stored in the repository.

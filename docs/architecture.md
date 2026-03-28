@@ -65,3 +65,6 @@ Intentionally excluded:
 - large test suite
 
 These exclusions keep the solution tightly aligned with the assessment goal.
+
+## AI delivery architecture
+Implementation is orchestrated through a lead Claude Code session with specialized subagents for planning, backend, frontend, review, and documentation. Durable agent configuration is stored in the repository under `.claude/agents/`, and orchestration is guided by a reusable skill under `.claude/skills/`. This keeps the AI-assisted workflow explicit, reviewable, and reproducible.
