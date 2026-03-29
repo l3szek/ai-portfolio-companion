@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/set-dev-ip.mjs",
     "start": "ng serve",
     "ionic": "ionic serve",
+    "prebuild": "node scripts/set-dev-ip.mjs",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
