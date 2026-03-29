@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { CurrencyPipe, DecimalPipe, NgFor, NgIf, NgClass } from '@angular/common';
 import {
+  IonHeader,
   IonContent,
   IonCard,
   IonList,
@@ -26,6 +27,7 @@ import { PortfolioSummary } from '../../core/models/portfolio.model';
     CurrencyPipe,
     DecimalPipe,
     AppHeaderComponent,
+    IonHeader,
     IonContent,
     IonCard,
     IonList,

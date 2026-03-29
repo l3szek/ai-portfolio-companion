@@ -6,6 +6,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import {
+  IonHeader,
   IonContent,
   IonFooter,
   IonTextarea,
@@ -33,6 +34,7 @@ interface Message {
     NgClass,
     FormsModule,
     AppHeaderComponent,
+    IonHeader,
     IonContent,
     IonFooter,
     IonTextarea,

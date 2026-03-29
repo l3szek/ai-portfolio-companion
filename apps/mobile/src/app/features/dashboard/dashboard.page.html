@@ -1,4 +1,8 @@
-<app-header></app-header>
+<div class="ion-page" id="main-content">
+
+<ion-header>
+  <app-header></app-header>
+</ion-header>
 
 <ion-content>
   <ion-refresher slot="fixed" (ionRefresh)="loadData($event)">
@@ -121,3 +125,4 @@
 
   </ng-container>
 </ion-content>
+</div>
