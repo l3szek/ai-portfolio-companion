@@ -1,6 +1,6 @@
 # AI Portfolio Companion
 
-A mobile-first AI portfolio companion built as a take-home assessment. The app shows a mock portfolio dashboard with holdings and metrics, and an AI chat interface with progressive streaming responses. The frontend is Angular 21 + Ionic 8 + Capacitor 8. The backend is Node.js + Express 5 + TypeScript. All AI integration stays on the backend; the frontend never calls an AI provider directly.
+A mobile-first AI portfolio companion. The app shows a mock portfolio dashboard with holdings and metrics, and an AI chat interface with progressive streaming responses. The frontend is Angular 21 + Ionic 8 + Capacitor 8. The backend is Node.js + Express 5 + TypeScript. All AI integration stays on the backend; the frontend never calls an AI provider directly.
 
 ## Prerequisites
 
